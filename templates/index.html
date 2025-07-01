@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} Library {% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="text-center">Virtual Library</h1>
+</div>
+<div  id="toolbar" class="container">
+  <div class="wrapper text-center">
+    <div class="btn-group">
+      <ul class="list-group bg-transparent list-group-flush">
+        <li class="list-group-item bg-transparent">
+          <a class="btn btn-success btn-lg col-sm-12" role="button" href="{{url_for('add')}}">Add New Book</a>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <a class="btn btn-primary btn-lg col-sm-12" role="button" href="{{url_for('listing')}}">View Book List</a>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <a class="btn btn-danger btn-lg col-sm-12" role="button"
+             href="{{url_for('search')}}">Search Books</a>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <a class="btn btn-warning btn-lg btn-block col-sm-12" role="button"
+             href="{{url_for('export')}}">Export Book list</a>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <a class="btn btn-warning btn-lg btn-block col-sm-12" role="button"
+             href="{{url_for('import_db')}}">Import Book list</a>
+        </li>
+        <li class="list-group-item bg-transparent">
+          <a class="btn btn-warning btn-lg btn-block col-sm-12" role="button"
+             href="{{url_for('delete_db')}}">Delete current Database</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

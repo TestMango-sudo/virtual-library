@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block title %}Add Book{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row wrapper text-center">
+    <div class="col-sm-12 col-md-8">
+      <h2>Are sure you want to delete the entire database?</h2>
+
+      <div  id="toolbar" class="container">
+        <div class="wrapper text-center">
+          <a class="btn btn-success btn-lg btn-block btn-space" role="button"
+             href="{{url_for('home')}}">Cancel</a>
+          <a class="btn btn-primary btn-lg btn-block btn-space" role="button"
+             href="{{url_for('delete_db1')}}">Comfirm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

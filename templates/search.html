@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+ 
+{% block title %}Update Rating{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <h1>Search for a Book</h1>
+      <h3>Enter an author and/or book title</h3>
+ 
+      {{ render_form(form, novalidate=True) }}
+      <p></p>
+        <a class="btn btn-primary btn-lg btn-block btn-space" role="button"
+             href="{{url_for('home')}}">Main Menu</a>
+
+    </div>
+  </div>
+</div>
+ 
+{% endblock %}
